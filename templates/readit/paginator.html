@@ -1,0 +1,17 @@
+<div class="row mt-5">
+    <div class="col text-center">
+        <div class="block-27">
+            <ul>
+                {% if objects_list.has_previous %}
+                <li><a href="?page={{ objects_list.previous_page_number }}">&lt;</a></li>
+                {% endif %}
+<!--                {% for page_item in objects_list.paginator.page_range %}-->
+<!--                <li class="{% if page_item == objects_list.number %}active{% endif %}"><a href="?page={{ page_item }}"></a><span>{{ page_item }}</span></li>-->
+<!--                {% endfor %}-->
+                {% if objects_list.has_next %}
+                <li><a href="?page={{ objects_list.next_page_number }}">&gt;</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
